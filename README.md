@@ -26,13 +26,10 @@ But you're a smart cookie, so you probably knew that already. :)
 
 There are 4 steps to actually install this program:
 
-Knowing your install location.
-
-Navigating to your extensions page.
-
-Enabling developer mode on your chromium-based browser.
-
-Loading the unpacked extension.
+1. Knowing your install location.
+2. Navigating to your extensions page.
+3. Enabling developer mode on your chromium-based browser.
+4. Loading the unpacked extension.
 
 All of which can be learned how to right here.
 
