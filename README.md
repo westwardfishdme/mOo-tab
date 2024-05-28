@@ -31,10 +31,6 @@ There are 4 steps to actually install this program:
 3. Enabling developer mode on your chromium-based browser.
 4. Loading the unpacked extension.
 
-All of which can be learned how to right here.
-
-If that link for whatever reason goes down, I have included this manual for ease of access.
-
 ## Step 1: Knowing your install location.
 ### Windows
 On Windows, your default install location SHOULD BE
