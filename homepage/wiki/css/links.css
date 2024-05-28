@@ -1,0 +1,45 @@
+
+body {
+	background: #212121; 
+	color: #ffffff;
+	width:auto;
+	height:auto;
+}
+
+a:focus{
+	box-shadow: none;
+	border: 1px solid #ffffff;
+	outline: none;
+}
+/* Headers */
+h1 {
+	color: #afaf00;
+	font-family: monospace;
+}
+
+/* Links */
+p {
+	color:#ffffff;
+	font-family: monospace;
+	font-size: 16px;
+}
+a {
+	color: #008a6a;
+	font-family: monospace;
+	font-size: 16px;
+}
+a:link{
+	color: #008a6a;
+	font-family: monospace;
+}
+a:hover{
+	color: #00ffff;
+	font-family: monospace;
+}
+
+/* Classes */
+
+iframe{
+	border: 0px;
+}
+

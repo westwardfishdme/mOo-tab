@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' type="text/css" href="css/main.css">
+    <link rel='stylesheet' type="text/css" href="highlight/styles/monokai.css">
+    <script src="highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll()</script>
+  </head>
+
+  <body id="about">
+    <h1>About:</h1>
+    <p>This is a custom homepage that I made that allows me to create an
+    efficient work flow.
+    You can reuse the html to create your own homepage for chromium based browsers and such.
+    </p>
+    <p>I've made this years ago, but finally published it to my <a href="https://github.com/westwardfishdme/mOo-tab" target="_parent">github</a> as an official project.</p>
+    <h1 id="licensing">Licensing:</h1>
+    <!--licensing-->
+    <div class="license">
+      <p>This project is licensed under the GPL-3 license:</p>
+      <p>
+        The GPLv3 License (GPLv3)
+      </p>
+      <p>
+        Copyright (c) 2024 Author
+      </p>
+      <p>
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+      </p>
+      <p>
+        You should have received a copy of the GNU General Public License along with this program.  If not, see <a target="_parent" href="http://www.gnu.org/licenses">http://www.gnu.org/licenses/</a>.
+      </p>
+    </div>
+    <!--Installation-->
+    <div id=installation>
+      <h1>Installation</h1>
+      <p>There are 2 methods to installing this program:</p>
+      <ol>
+        <li><a target="_parent" href="https://chromewebstore.google.com/">Chrome webstore</a></li>
+        <li><a href="#manual">Manual installation</a></li>
+      </ol>
+      <p>Downloading through the Chrome webstore is probably the easiest method of installation-- but increases the learning curve of modifying the program.</p>
+      <p><b><u>Therefore, it is highly recommended that you install this extension manually.</u></b></p>
+    </div>
+    <div id="manual">
+      <h1>Manual Installation:</h1>
+      <p><b>BEFORE YOU INSTALL THIS PROGRAM MANUALLY, NOTE THAT YOU MUST ALSO UPDATE THE EXTENSION MANUALLY.</b></p>
+      <p>But you're a smart cookie, so you probably knew that already. :)</p>
+      <br><br>
+      <p>There are 4 steps to actually install this program:</p>
+      <ol>
+        <li><p>Knowing your install location.</p></li>
+        <li><p>Navigating to your <a target="_blank" href="step-2">extensions page.</a></p></li>
+        <li><p>Enabling developer mode on your chromium-based browser.</p></li>
+        <li><p>Loading the unpacked extension.</p></li>
+      </ol>
+      <p>All of which can be learned how to right <a target="_parent" href="https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked">here.</a></p>
+      <p>If that link for whatever reason goes down, I have included this manual for ease of access.</p>
+      <!--OK here are the actual steps.-->
+      <div id=step-1>
+        <!--Windows-->
+        <h2>Step 1: Knowing your install location.</h2>
+        <h3>Windows</h3>
+        <p>On Windows, your default install location <b>SHOULD BE</b></p>
+        <code class="code_nice">C:\Users\{username}\Downloads\custom-homepage</code>
+        <!--*nix-like systems-->
+        <h3>MacOS/Linux</h3>
+        <p>On MacOS/Linux, your default install location <b>SHOULD BE</b></p>
+        <code class="code_nice">/home/{username}/Downloads/custom-homepage</code>
+        <p>Basically, wherever you downloaded the code to, navigate there. You will need to know this for the next steps.</p>
+        <p>If it's not in any of those locations, only you and god knows where you installed this to.</p>
+      </div>
+      <div id=step-2>
+        <h2>Step 2: Navigating to the Chrome extensions page.</h2>
+        <p>This is a pretty easy step. Inside your browser, go to the following page:</p>
+        <code class="code_nice">chrome://extensions</code>
+        <p>This can be done by either entering that to your search bar, or by clicking on the 3 dots in the top right corner, and clicking on <b>'Extensions'</b>.</p>
+      </div>
+      <div id=step-3>
+        <h2>Step 3: Enabling developer mode.</h2>
+        <p>Inside of chrome://extensions, you're going to click on the little switch in the top right that says "Developer mode".</p>
+        <p>That's it, you're in developer mode.</p>
+        
+      </div>
+      <div id=step-4>
+        <h2>Step 4: Loading the unpacked extension.</h2>
+        <p>After you enable developer mode, you'll see a little bar pop-up from the top of the screen with 3 options: <b>Load unpacked, Pack extension,</b> and <b>Update.</b></p>
+        <p>Click on <b>Load unpacked</b> and now navigate to the extension's directory that you found in <a href="#step-1">step 1</a>, and like that, you installed the extension.</p>
+      </div>
+    </div>
+    <!--creating links-->
+    <div id="creating-links">
+      <h1>Creating links:</h1>
+      <p>To create a links page, go to the directory containing the extension.</p> 
+      <p>There you will see files containing the names "links(n).html" where n is any number.</p> 
+      <p>A sample links page will look something like:</p>
+      <pre>
+        <code>
+        <xmp>
+        <!--Sample links page-->
+          <!DOCTYPE html>
+          <head>
+            <meta charset="utf-8" />
+            <link rel='stylesheet' type="text/css" href="css/main.css">
+          </head>
+              <!--
+              You can use this first page as a sample for links page 1,2,3,4 and so on.
+              If you want to add links and such, you can copy this page to links(*).html
+              where (*) is the number you wish to change-- i.e. 'links4.html'.
+              -->
+            <body>
+            <!--Search Engines-->
+              <div id="search-engines">
+                <p>Search Engines:</p>
+                <ol>
+                  <li><a target="_parent" href="https://www.google.com">[ Google ]</a></li>
+                  <li><a target="_parent" href="https://www.duckduckgo.com">[ DuckDuckGo ]</a></li>
+                  <li><a target="_parent" href="https://chat.openai.com/chat">[ ChatGPT ]</a></li>
+                </ol>
+              </div>
+            </body>
+          </html>
+        </xmp>
+        </code>
+      </pre>
+      <p>As you can see, it's quite literally just making a webpage in html. This is a sample page, however if you want to style it your own way, (i.e. without the "ordered list" tag) you are free to do so.</p>
+      <p>The important thing to make use of is that stylesheet import on the top of the document, as that is the main page's <a href="css.html">css style document</a>, if you wish to have a different css stylesheet, you absolutely can change that.</p>
+      <p>By default, you are allowed up to 4 custom pages with keybinds. However modifying the <a href="modifyingjs.html#keybinds" target="content">javascript</a> will allow you to add more keybinded pages.</p> 
+      <p>To add links, simply insert:  </p>
+      <code class="code_nice">&lt;a target="_parent" href="http://{webpage url}"&gt;{whatever_name_you_want}&lt;/a&gt;</code>
+      <p>To wherever the links begin. It is optional to include a &lt;p&gt; tag or &lt;div&gt; tag for organization like I have in my example.</p>
+    </div>
+  </body>
+
+</html>

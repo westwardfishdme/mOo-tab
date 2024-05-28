@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' type="text/css" href="css/main.css">
+    <link rel='stylesheet' type="text/css" href="highlight/styles/monokai.css">
+    <script src="highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll()</script>
+  </head>
+
+  <body>
+    <h1>Modifying the JavaScript:</h1>
+    <p>Editing the Javascript for this software is as simple as counting 1, 2, 3.</p>
+    <p>Seriously-- lets take a look at the program's primary functionality: keybinding.</p>
+    <br>
+    
+    <pre>
+      <code>  
+
+// ./js/lib/frameinspect.js
+var iframe = document.getElementById("linkmenu");
+export function framedebug(source) {
+  console.clear()
+  //regex
+  const currentSource = iframe.src;
+  const regex = new RegExp(source);
+  const result = regex.test(currentSource) ? true : false
+
+  console.log("Current value of linkmenu: "+currentSource);
+  console.log("Current value of Regex: "+regex);
+  console.log("Frame is in Regex?: "+result);
+}
+
+export function frameswitcher(source){
+  //regex
+  const currentSource = iframe.src;
+  const regex = new RegExp(source);
+  const result = regex.test(currentSource) ? true : false
+
+  if (!regex.test(currentSource)) {
+    iframe.src = source;
+    console.log(source +" sent to " + iframe);
+  }else{
+    console.log(source + " is already main.")
+    }
+}
+console.log("navigator.js intialized.");
+import {framedebug,frameswitcher}  from "./lib/frameinspect.js";
+let source = "";
+
+      </code>
+    </pre>
+
+    <p>This library is responsible for 2 things: checking the frame inside of the text box, and determining whether or not the page within the container is in frame.</p>
+    <p>If the requested page is <b>NOT</b> the same value inside of the container, then the page changes.</p>
+    <p>Now, lets actually look at how the program creates the keybinds:</p>
+    <h1 id=keybinds>Modifying the keybinds</h1>
+
+    <pre>
+      <code>
+// ./js/navigator.js
+window.addEventListener("keydown", function name(event) {
+  switch(event.key){
+    case "1":
+      source = "links1.html";
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    case "2":
+      source = "links2.html";
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    case "3":
+      source = "links3.html";
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    case "4":
+      source="links4.html"
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    case "h":
+      source="help.html";
+      framedebug(source);
+      frameswitcher(source);
+      break;
+
+  }
+});
+        </code>
+      </pre>
+      <p>This one is rather simple, and more than likely will interact with, or edit the most.</p>
+      <p>The program uses a switch/case method to determine the incoming keystroke and binds it to run all code within the codeblock below each case.</p>
+      <p>More specifically, it sets the variable 'source', and uses the previous library to switch the iframe container to the variable set within the codeblock.</p>
+      <p>If you wish to add more functionality to the program, feel free to fork or submit a pull request and I will audit your submissions.</p>
+      <p>An example keybind with a new links page would look like:</p>
+    <pre>
+      <code>
+// ./js/navigator.js
+window.addEventListener("keydown", function name(event) {
+  switch(event.key){
+    case "1":
+      source = "links1.html";
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    case "2":
+      source = "links2.html";
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    case "3":
+      source = "links3.html";
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    case "4":
+      source="links4.html"
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    // new section:
+    case "x":
+      source="linksX.html"
+      framedebug(source);
+      frameswitcher(source);
+      break;
+    // end of new section.
+    case "h":
+      source="help.html";
+      framedebug(source);
+      frameswitcher(source);
+      break;
+
+  }
+});
+        </code>
+      </pre>
+      <p>In this case, when the key 'x' is pressed, the inner page will switch to 'linksX.html'.</p>
+      <p>Of course, you could make any custom keybinds to your heart's content.</p>
+      <p>In the future, I may set a create a settings page that modifies the keybinds in a more simple manner.</p>
+  </body>
+
+</html>
+

@@ -1,0 +1,106 @@
+/* Theme: Gruvbox Dark*/
+body {
+	background: #1a1a1a; 
+	color: #ffffff;
+	width:auto;
+	height:auto;
+	padding-bottom:20px;
+}
+
+a:focus{
+	box-shadow: none;
+	border: 1px solid #ffffff;
+	outline: none;
+}
+/* Headers */
+h1 {
+	color: #afaf00;
+	font-family: monospace;
+}
+h2{
+	color: #ffaf00;
+	font-family:monospace;
+}
+h3{
+	color: #00aaff;
+	font-family:monospace;
+}
+
+/* Links */
+p {
+	color:#ffffff;
+	font-family: monospace;
+	font-size: 16px;
+	width:50%;
+}
+a {
+	color: #008a6a;
+	font-family: monospace;
+	font-size: 16px;
+}
+a:link{
+	color: #008a6a;
+	font-family: monospace;
+}
+a:hover{
+	color: #00ffff;
+	font-family: monospace;
+}
+
+/* Classes */
+
+.title {
+	text-align:center;
+	color:#ffc2ff;
+	height:30px;
+}
+iframe{
+	border: 0px;
+}
+#spaced{
+	margin-left:5px;
+	margin-right:5px;
+}
+.container{
+	display:flex;
+	flex-direction:row;
+	width:100%;
+	height:90vh;
+	border:1px solid #ffffff;
+	justify-content:flex-start;
+}
+#down{
+	flex-grow:1;
+}
+.right_window{
+	width:75%;
+	height:100%;
+}
+.left_window{
+	width:25%;
+	height:100%;
+}
+pre{
+	height:auto;
+	width:60%;
+}
+li{
+	font-family:monospace;
+}
+ol{
+	font-family:monospace;
+}
+ul{
+	font-family:monospace;
+}
+.code_nice{
+	background:#272822;
+	padding:5px;
+	height:auto;
+	border:4px solid #272822;
+	border-radius:5px;
+	font-family: monospace;
+	font-size: 16px;
+	width:50%;
+	
+}

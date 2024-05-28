@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	<meta charset="utf-8" />
+  	<link rel='stylesheet' type="text/css" href="css/main.css">
+  	<link rel='stylesheet' type="text/css" href="highlight/styles/monokai.css">
+  	<script src="highlight/highlight.min.js"></script>
+  	<script>hljs.highlightAll()</script>
+	</head>
+
+	<body>
+		<!--HTML customization-->
+  	<div id="customizing_index">
+  		<h1>Editing the main page's HTML:</h1>
+  		<p>When I was designing the page, I needed two things:</p>
+  		<ol>
+  			<li><p>I needed it to be simple, with as minimal elements as possible.</p></li>
+  			<li><p>The webpage needed to change the inner text box without changing the whole page.</p></li>
+  		</ol>
+  		<p>So the best way I figured to do this is to have a main index page, and inside of the index, an &lt;iframe&gt; would switch between the links.</p>
+  		<p>If you notice in the <a href="#default_css">default css</a> there are id attributes to a "grid" and "griditem". This is because the entire main page is based on a 3x2 grid system.</p>
+  		<p>Initially, I wanted a side panel to show me all of the links to all of the link pages, but opted for a keybind system instead.</p>
+  		<p>I did however leave the code for implementing this grid system just in case I wanted to add more functionality to the main page, such as a <a href="future_functionality.html">spotify</a> music panel.</p>
+		</div>
+		<div id="stock_index">
+			<p>As a reference, here is the stock index.html:</p>
+			<pre>
+			<code>
+			<xmp>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>New Tab</title>
+  <meta charset="utf-8" />
+  <link rel='stylesheet' type="text/css" href="css/main.css">
+  <link rel='icon' type="text/css" href="icon.png" type="image/x-icon">
+  <script src="js/navigator.js" type="module"></script>
+</head>
+
+<body>
+  <!-- title -->
+  <h1 class="title">[ Custom Homepage ]</h1>
+
+  <!-- main page -->
+  <div class="grid">
+    <!--Grid Right Side-->
+    <iframe id="linkmenu" name="links" class="griditem" src="links1.html"></iframe>
+  </div>
+
+
+	<!--This is just the menu at the bottom of the page, you can either ignore this or include it in your new index page.-->
+   <div id="spaced">
+     <a class="botlinks" href="help.html" target="links">[ help ]</a>
+     <a class="botlinks" href="about.html" target="links">[ about ]</a>
+     <a class="botlinks" href="wiki/index.html">[ wiki ]</a>
+     <a class="botlinks" href="http://github.com/westwardfishdme/custom_chromium_webpage_extension" target="links">[ github page ]</a>
+   </div>
+
+  <!--Spacer-->
+</body>
+
+</html>
+			</xmp>
+			</code>
+			</pre>
+		</div>
+  	<div id="custom_header">
+  		<h2>Custom title (header)</h2>
+  		<p>You can give your homepage a custom title! Simply edit the value inside of the sole &lt;h1&gt; tag to whatever you want it to say instead of <br>"[ Custom Homepage ]".</p>
+  	</div>
+  	<div id="custom_title">
+  		<h2>Custom title (new tab name)</h2>
+  		<p>You can give your homepage a custom tab name! Simply edit the &lt;title&gt; tag to whatever you want it to say instead of "New Tab".</p>
+  	</div>
+  	<div id="custom_icon">
+  		<h2>Custom tab icon</h2>
+  		<p>If you have a custom icon you would like to put up, simply upload 'icon.png' to wherever the extension is located.</p>
+  		<p>The default logo is just a clear .png, so feel free to delete or replace this file.</p>
+  	</div>
+
+
+
+
+    <!--CSS customization-->
+  	<div id="custom_css">
+    	<h1>Custom CSS:</h1>
+    	<p>By default, your main .css file is located at:</p>
+    	<code class="code_nice">/css/main.css</code>
+    	<p>By default you will have <b>my theme</b> for the project. If you're ok with the default theme, you're cool and got taste. :)</p>
+    	<p>All jokes aside, this part of the wiki will explain how to modify each css portion.</p>
+    	</div>
+
+
+  	<div id="default_css">
+    	<h2>Customizing the CSS:</h2>
+    		<pre>
+    			<code>
+/* Default main.css */
+body {
+	background: #1a1a1a; 
+	color: #ffffff;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:10px;
+	padding-right:10px;
+	max-width:800px	
+}
+
+/* Headers */
+
+h1 {
+	color: #ffaf00;
+	font-family: monospace;
+}
+
+.title {
+	text-align:center;
+}
+
+/* paragraphs */
+
+p {
+	color:#ffffff;
+	font-family: monospace;
+	font-size: 16px;
+}
+
+/* Links */
+
+a {
+	color: #ffaf00;
+	font-family: monospace;
+	font-size: 16px;
+}
+a:link{
+	color: #ffaf00;
+	font-family: monospace;
+}
+a:hover{
+	color: #ffffff;
+	font-family: monospace;
+}
+a:focus{
+	box-shadow: none;
+	border: 1px solid #ffffff;
+	outline: none;
+}
+
+/* Miscellaneous Classes */
+	
+#borderedtext{
+	border-style: solid;
+	padding:10px;
+	width:400px;
+}
+
+#linkmenu{
+	width:400px;
+	height:400px;
+}
+
+
+.grid{
+	display:grid;
+	max-width:800px;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto;
+	padding:10px;
+	align-content:center;
+	justify-content:center;
+}
+.griditem{
+	padding:10px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:10px;
+	margin-top:10px;
+
+}
+
+/* CSS for bottom menu (link selection) */
+#spaced{
+	align-content:center;
+	justify-content:center;
+	max-width:800px;
+	text-align:center;
+}
+.botlink{
+	margin-left:10px;
+	margin-right:10px;
+}
+				</code>
+			</pre>
+			<p>By default this is the css file I included with the extension. As you can see, there's not a lot to modify.</p>
+			<p>For the most part, you're going to want to focus on the following sections of the code:</p>
+			<ul>
+				<li><a href="#body">body and background</a></li>
+				<li><a href="#headers">headers</a></li>
+				<li><a href="#links">links</a></li>
+				<li><a href="#paragraphs">paragraphs</a></li>
+			</ul>
+  	</div>
+  	<!--Body and background-->
+  	<div id="body">
+  		<h2>Body and Background</h2>
+  		<pre>
+  			<code>
+body {
+	background: #1a1a1a; 
+	color: #ffffff;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:10px;
+	padding-right:10px;
+	max-width:800px	
+}
+  			</code>
+  		</pre>
+  		<p>To change the background of the homepage, all you have to do is change the color tag:</p>
+  		<p>For example, you can change the hex code</p>
+  		<pre>
+  			<code id="code_nice"> background: #000000;</code>
+  		</pre>
+  		<p>would change the entire background to a pitch black, of course you could also put:</p>
+  		<pre>
+  			<code id="code_nice">background: black;</code>
+  		</pre>
+  		<p>This would do the same thing.</p>
+  		<p>If you want to see a whole list of hex colors check out this <a href="https://htmlcolorcodes.com/color-picker/">link</a> here.</p>
+  		
+  	</div>
+  	<!--Headers-->
+  	<div id="headers">
+  		<h2>Headers:</h2>
+  		<p>This takes care of customizing the title color.</p>
+  		<p>Since there is only one title, you can easily edit this one.</p>
+  		<pre>
+  			<code>
+/* Headers */
+
+h1 {
+	color: #ffaf00;
+	font-family: monospace;
+}
+
+.title {
+	text-align:center;
+	color: #ffc2ff;
+}
+				</code>
+			</pre>
+			<p>To change the color: you can just change the single hex color value inside of 'h1'.</p>
+			<p><b>NOTE: ANY &lt;h1&gt; TAGS WILL BE TURNED TO THIS COLOR.</b></p>
+			<p>If you want to just change the title color, I highly recommend doing this:</p>
+			<pre>
+			<code>
+.title {
+	color:#hexvalue;
+	text-align:center;
+}
+			</code>
+			</pre>
+
+  
+  	
+  	</div>
+  <!--Links-->
+  	<div id="links">
+  		<h2>Links:</h2>
+  		<pre>
+  			<code>
+a {
+	color: #ffaf00;
+	font-family: monospace;
+	font-size: 16px;
+}
+a:link{
+	color: #ffaf00;
+	font-family: monospace;
+}
+a:hover{
+	color: #ffffff;
+	font-family: monospace;
+}
+a:focus{
+	box-shadow: none;
+	border: 1px solid #ffffff;
+	outline: none;
+}
+  			</code>
+  		</pre>
+  	<p>Editing the link colors are rather easy, it's like how you change every other color.</p>
+  	<p>Albeit, there are further customizations you can do with links, such as changing the color as you hover over the link.</p>
+  	<p>You can safely ignore focus, but if you want to change or remove it feel free :)</p>
+  	<p>By default all text inside of the &lt;a&gt; tag, including links you clicked on, will be whatever color is in this code section:</p>
+  	<pre>
+  		<code>
+a {
+	color: #ffaf00;
+	font-family: monospace;
+	font-size: 16px;
+}
+  		</code>
+  	</pre>
+  	<p>This section also manages the font and size as well, so you can modify those values as well if you'd like something else.</p>
+  	<p>The color of the link when you hover over it is in this section:</p>
+  	<pre>
+  		<code>
+a:hover{
+	color: #ffffff;
+}
+  		</code>
+  	</pre>
+  	<p>To change the color, simply change the value defined after. i.e:</p>
+  	<pre>
+  		<code>
+a{
+	color:#ffffff;
+	font-family: Anonymous Pro;
+	font-size: 16px;
+}
+a:hover{
+	color: #ff0000;
+}
+  		</code>
+  	</pre>
+  	<p>This would change the default colors to white, the font to Anonymous Pro, and when hovering over the link, it switches to red.</p>
+  		
+  	</div>
+  	<!--Paragraphs-->
+  	<div id="paragraphs">
+  		<h2>Paragraphs and all misc. text:</h2>
+  		<p>Like headers, there are very few tags to edit in this one as well.</p>
+  		<pre>
+  			<code>
+
+/* paragraphs */
+
+p {
+	color:#ffffff;
+	font-family: monospace;
+	font-size: 16px;
+}
+  			</code>
+  		</pre>
+  		<p>Just change the hex value of color and all miscellaneous subtext, like your inner titles will be changed to said color.</p>
+  		<p>You can also change the font and size as well with the other 2 attributes if they aren't to your liking.</p>
+  	</div>
+
+	</body>
+
+</html>
